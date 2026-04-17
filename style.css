@@ -1,13 +1,13 @@
 :root {
-  --bg: #0B0F17;          /* App background */
-  --card: #131722;        /* Player cards, search bar, nav */
-  --card-active: #1C2230; /* Hover/selected states */
-  --pitch: #00E572;       /* Primary - goals, CTAs, active tab */
-  --gold: #FFC700;        /* Secondary - ratings, trophies, MOTM */
-  --live: #FF4747;        /* Live games, red cards, errors only */
-  --text: #E9EDF2;        /* Player names, headings */
-  --text-2: #8892A0;      /* Club, position, stats labels */
-  --stroke: #2A313D;      /* Borders, dividers */
+  --bg: #0B0F17;         
+  --card: #131722;        
+  --card-active: #1C2230;
+  --pitch: #00E572;       
+  --gold: #FFC700;        
+  --live: #FF4747;        
+  --text: #E9EDF2;       
+  --text-2: #8892A0;      
+  --stroke: #2A313D;      
 }
 
 * {
