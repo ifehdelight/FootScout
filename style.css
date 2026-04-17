@@ -1,0 +1,68 @@
+:root {
+  --bg: #0B0F17;          /* App background */
+  --card: #131722;        /* Player cards, search bar, nav */
+  --card-active: #1C2230; /* Hover/selected states */
+  --pitch: #00E572;       /* Primary - goals, CTAs, active tab */
+  --gold: #FFC700;        /* Secondary - ratings, trophies, MOTM */
+  --live: #FF4747;        /* Live games, red cards, errors only */
+  --text: #E9EDF2;        /* Player names, headings */
+  --text-2: #8892A0;      /* Club, position, stats labels */
+  --stroke: #2A313D;      /* Borders, dividers */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: var(--text);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 16px;
+}
+
+.container h2 {
+  margin-bottom: 25px;
+  font-size: clamp(20px, 5vw, 28px);
+}
+
+.container .search-icon {
+  width: 8%;
+  background: transparent;
+  position: absolute;
+  outline: none;
+  border: none;
+  bottom: 5px;
+}
+
+.container .searchInput {
+  color: var(--text);
+  background-color: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--stroke);
+  width: 90%;
+  outline: none;
+  padding: 16px 14px;
+  position: relative;
+}
+
+.container .searchInput::placeholder {
+  color: var(--text-2);
+  opacity: 1;
+}
+
+.container .populars {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
