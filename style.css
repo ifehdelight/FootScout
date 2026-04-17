@@ -1,13 +1,13 @@
 :root {
-  --bg: #0B0F17;         
-  --card: #131722;        
-  --card-active: #1C2230;
-  --pitch: #00E572;       
-  --gold: #FFC700;        
-  --live: #FF4747;        
-  --text: #E9EDF2;       
-  --text-2: #8892A0;      
-  --stroke: #2A313D;      
+  --bg: #0B0F17;          /* App background */
+  --card: #131722;        /* Player cards, search bar, nav */
+  --card-active: #1C2230; /* Hover/selected states */
+  --pitch: #00E572;       /* Primary - goals, CTAs, active tab */
+  --gold: #FFC700;        /* Secondary - ratings, trophies, MOTM */
+  --live: #FF4747;        /* Live games, red cards, errors only */
+  --text: #E9EDF2;        /* Player names, headings */
+  --text-2: #8892A0;      /* Club, position, stats labels */
+  --stroke: #2A313D;      /* Borders, dividers */
 }
 
 * {
@@ -48,10 +48,11 @@ body {
   background-color: var(--card);
   border-radius: 12px;
   border: 1px solid var(--stroke);
-  width: 90%;
+  width: 100%;
   outline: none;
   padding: 16px 14px;
   position: relative;
+  margin-bottom: 15px;
 }
 
 .container .searchInput::placeholder {
@@ -59,10 +60,65 @@ body {
   opacity: 1;
 }
 
-.container .populars {
+.searchInput:focus {
+  border-color: var(--pitch);
+  background-color: var(--card-active);
+}
+
+.populars {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-top: 10px;
 }
+
+.populars h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.popular-players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+
+.popular-players::-webkit-scrollbar {
+  display: none;
+}
+
+.player-card {
+  flex: 0,0, auto;
+  width: clamp(100px, 28vw, 130px);
+  background-color: var(--card);
+  padding: 8px;
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  scroll-snap-align: start;
+  -webkit-overflow-scrolling: touch;
+}
+
+.player-card img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  display: block;
+  object-fit: cover;
+}
+
+.player-infos {
+  color: var(--text2);
+  font-size: clamp(12px, 3.5vw, 14px);
+  opacity: 0.9;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin-top: 8px;
+}
+
 
